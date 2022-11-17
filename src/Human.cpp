@@ -14,8 +14,6 @@ Human::Human(std::unique_ptr<Watch> &ptr1):w(std::move(ptr1)) {
 	//a watch, 
 }
 
-
-
 //how to get time from a human? You ask.
 //this is called delegation
 //if has a watch, returns time, otherwise says
@@ -26,5 +24,3 @@ std::string Human::getTime(){
 	else
 		return "I dont have a watch";
 }
-
-

@@ -16,6 +16,8 @@ public:
 	//pass by ref since you cannot copy construct a unique pointer
 	Human(std::unique_ptr<Watch> &ptr1);
 
+	//do not need to define destructor, the default mplementation will do
+
 	//how to get time from a human? You ask.
 	//this is called delegation
 	//if this human has a watch, 
@@ -26,6 +28,8 @@ public:
 private:
 	//pointer, if have no watch its null
 	std::unique_ptr<Watch> w;
+
+	//copy and assign are automatically disabled (ie will not compile if you try it)  because of the unique pointer
 };
 
 #endif /* HUMAN_H_ */
